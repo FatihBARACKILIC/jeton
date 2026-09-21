@@ -1,0 +1,124 @@
+/* Jeton'un kendi paleti: ui/theme/CabinetColors.kt'den okundu ki sayfa ile
+   uygulama birbirinden kopmasın. Açık yarısı :root'ta. */
+:root {
+  --shell: #EDE6DC;
+  --card: #FBF7F0;
+  --well: #DCD2C4;
+  --line: #D3C6B4;
+  --ink: #2A2229;
+  --ink-muted: #4A4048;
+  --ink-faint: #8C8177;
+  --accent: #C8761F;
+  --accent-base: #8E5013;
+  --key-base: #C9BCA9;
+  --well-shadow: rgba(66, 52, 34, 0.16);
+  --focus: #8E5013;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shell: #171216;
+    --card: #241C24;
+    --well: #100C10;
+    --line: #3A2F3B;
+    --ink: #F6EFE6;
+    --ink-muted: #C6B8C1;
+    --ink-faint: #8E8390;
+    --accent: #F2A33C;
+    --accent-base: #8E5A1B;
+    --key-base: #0D090C;
+    --well-shadow: rgba(0, 0, 0, 0.55);
+    --focus: #F7B863;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--shell);
+  color: var(--ink);
+  font-family: "Public Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+  padding: 40px 20px 72px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+a { color: var(--accent); }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  font-size: clamp(30px, 7vw, 44px);
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 36px 0 10px;
+}
+
+p, li { color: var(--ink-muted); }
+p { margin: 0 0 14px; max-width: 64ch; }
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+strong { color: var(--ink); }
+
+/* Özet, uygulamadaki kuyu: içeri gömülü tek gölge, Material yüksekliği yok. */
+.lede {
+  background: var(--well);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: inset 0 2px 5px var(--well-shadow);
+  padding: 18px 20px;
+  margin: 24px 0 8px;
+}
+
+.lede p:last-child { margin-bottom: 0; }
+
+.lede .big {
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.lang {
+  font-size: 13px;
+  margin-bottom: 28px;
+}
