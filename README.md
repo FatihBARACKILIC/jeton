@@ -9,6 +9,8 @@ https://fatihbarackilic.github.io/jeton/
 - `privacy-en.html` — privacy policy, English
 - `veri.html` — the full list of what is collected, Turkish; the policy links into it
 - `data-en.html` — the same, English
+- `sil.html` — how to delete your data, Turkish; Play Console's data deletion URL
+- `delete-en.html` — the same, English
 - `index.html` — landing page
 - `style.css` — shared stylesheet
 
