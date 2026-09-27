@@ -7,6 +7,8 @@ https://fatihbarackilic.github.io/jeton/
 
 - `privacy.html` — privacy policy, Turkish
 - `privacy-en.html` — privacy policy, English
+- `veri.html` — the full list of what is collected, Turkish; the policy links into it
+- `data-en.html` — the same, English
 - `index.html` — landing page
 - `style.css` — shared stylesheet
 
